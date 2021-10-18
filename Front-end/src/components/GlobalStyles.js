@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color : black;
     background-color: white;
+    font-family: 'NanumSquare', sans-serif;
   }
   
   a {

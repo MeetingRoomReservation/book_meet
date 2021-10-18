@@ -20,6 +20,14 @@
 
 
 
+## 🚩 규칙
+
+**커밋 메시지 작성**
+
+- [**[Git] 깃 커밋 메시지 작성법(git commit message)**](https://richone.tistory.com/26)
+
+
+
 ## 🚩 Settings
 
 ### **Frontend**
@@ -76,4 +84,10 @@
 @loadable/component 패키지
 
 [참고: 리액트 프로젝트 코드 스플리팅 정복하기](https://velog.io/@velopert/react-code-splitting)
+
+
+
+**폰트 적용**
+
+[NanumSquare](https://github.com/moonspam/NanumSquare) 
 
