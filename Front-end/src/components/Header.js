@@ -1,5 +1,4 @@
 import React from 'react';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -8,13 +7,14 @@ const MainContainer = styled.div`
   justify-content: space-between;
   height: 100%;
   max-width: 100%;
-  padding: 20px;
+  padding: 25px;
   color: white;
   background-color: #344551;
+  align-items: center;
 `;
 
 const Title = styled.div`
-  font-size: 35px;
+  font-size: 25px;
 `;
 
 const BtnContainer = styled.div`
@@ -23,6 +23,7 @@ const BtnContainer = styled.div`
 
 const BtnList = styled.span`
   padding: 10px;
+  a:hover{color:#FF9E0D};
 `;
 
 const Header = () => {
@@ -33,16 +34,16 @@ const Header = () => {
       </Title>
       <BtnContainer>
         <BtnList>
+          <Link to="/rooms">공지사항</Link>
+        </BtnList>
+        <BtnList>
+          <Link to="/minutes">회의실 예약</Link>
+        </BtnList>
+        <BtnList>
+          <Link to="/">회의록작성</Link>
+        </BtnList>
+        <BtnList>
           <Link to="/users">마이페이지</Link>
-        </BtnList>
-        <BtnList>
-          <Link to="/rooms">회의실</Link>
-        </BtnList>
-        <BtnList>
-          <Link to="/minutes">회의록</Link>
-        </BtnList>
-        <BtnList>
-          <Link to="/">로그아웃</Link>
         </BtnList>
       </BtnContainer>
     </MainContainer>
