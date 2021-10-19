@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <LoginWrap>
       <LoginBox>
-        <FormTitle>회의 관리 시스템123</FormTitle>
+        <FormTitle>회의 관리 시스템</FormTitle>
         <FormSpan>conference management</FormSpan>
         <FormSpan>system</FormSpan>
         <FormSt>
