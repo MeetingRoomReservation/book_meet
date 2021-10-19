@@ -8,6 +8,7 @@ const Register = loadable(() => import('@pages/Register'));
 const Minutes = loadable(() => import('@pages/Minutes'));
 const Users = loadable(() => import('@pages/Users'));
 const Notices = loadable(() => import('@pages/Notices'));
+const Rooms = loadable(() => import('@pages/Rooms'));
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
         <Route path="/users" component={Users} />
         <Route path="/minutes" component={Minutes} />
         <Route path="/notices" component={Notices} />
+        <Route path="/rooms" component={Rooms} />
       </Switch>
     </Router>
   );
