@@ -23,7 +23,9 @@ const BtnContainer = styled.div`
 
 const BtnList = styled.span`
   padding: 10px;
-  a:hover{color:#FF9E0D};
+  a:hover {
+    color: #ff9e0d;
+  }
 `;
 
 const Header = () => {
@@ -34,13 +36,13 @@ const Header = () => {
       </Title>
       <BtnContainer>
         <BtnList>
-          <Link to="/rooms">공지사항</Link>
+          <Link to="/notices">공지사항</Link>
         </BtnList>
         <BtnList>
-          <Link to="/minutes">회의실 예약</Link>
+          <Link to="/rooms">회의실 예약</Link>
         </BtnList>
         <BtnList>
-          <Link to="/">회의록작성</Link>
+          <Link to="/minutes">회의록작성</Link>
         </BtnList>
         <BtnList>
           <Link to="/users">마이페이지</Link>
