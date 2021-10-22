@@ -64,6 +64,7 @@ export const Datacon = styled.div`
 `;
 
 export const Roomcon = styled.div`
+height: auto;
 `;
 
 export const Roomwrap = styled.div`
@@ -72,19 +73,29 @@ export const Roomwrap = styled.div`
     justify-content: space-evenly;
     align-items: center;
     margin-top: 40px;
+    flex-wrap: wrap;
 `;
 
 export const Roomcard = styled.div`
-    width: 25%;
+    margin:0 auto 0px;
     max-width: 250px;
     border-radius: 25px;
     overflow: hidden;
     background: #fff;
     padding: 0 0 5px 0;
-    position: relative;
+    border : 5px solid #fff;
+    cursor: pointer;
+    :hover{
+        border : 5px solid #FF9E0D
+    }
   
 `;
 
+export const Cardbox = styled.div`
+     width: 33.333%;
+     margin: 0 0 30px;
+   
+`;
 
 export const Roomimg = styled.img`
     width: 100%;
