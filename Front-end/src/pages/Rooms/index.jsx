@@ -74,7 +74,7 @@ const Index = () => {
   const cardInfo = (e) => {
      const id = e.currentTarget.dataset.id;
      const result =  dummy.filter((c)=>{
-        return c.id == id;
+        return c.id === Number(id);
       })
 
       setData(result[0]);

@@ -55,25 +55,25 @@ const Modalitem = styled.span`
 
 
 // ------active 관련 style---
-const activModal = {
-    display : "block"
-}
+// const activModal = {
+//     display : "block"
+// }
 
-const select = {
-    background : "#5EB550",
-    color:"#fff"
+// const select = {
+//     background : "#5EB550",
+//     color:"#fff"
     
-}
-const roomOut = {
-    background: "#6F6D69",
-    color:"#fff"
-}
+// }
+// const roomOut = {
+//     background: "#6F6D69",
+//     color:"#fff"
+// }
 
 // ---------------------------
-
+const times = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
 
 const Roommodal = ({data,activeModal}) => {
-    const times = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
+    
     
     // const noneTimes = ['09:00','14:00','11:00','12:00','15:00'];
 
@@ -87,19 +87,19 @@ const Roommodal = ({data,activeModal}) => {
 //--------------------------------------------------------------
     useEffect(() => {
         console.log(status)
-    },[timeStatus])
+    },[timeStatus,status])
  
     useEffect(() => {
         status.sort((a,b) => {
             return a - b;
         })
        let result = times.filter((c,index) => {
-            return index == status[0] || index == status[1]
+            return index === status[0] || index === status[1]
         })
 
-        let txt = result[0] == undefined ? '시간을 선택해주세요.' : result[1] == undefined ? `${result[0]}` : `${result[0]} ~ ${result[1]}`;
+        let txt = result[0] === undefined ? '시간을 선택해주세요.' : result[1] === undefined ? `${result[0]}` : `${result[0]} ~ ${result[1]}`;
         setTxtStatus(txt)
-        let timer = status[0] == undefined ? '0' :  status.length == 1 ? '1' : status[1] - status[0] + 1;
+        let timer = status[0] === undefined ? '0' :  status.length === 1 ? '1' : status[1] - status[0] + 1;
         timeSetStatus(timer)
      
     },[status])
@@ -120,7 +120,6 @@ const Roommodal = ({data,activeModal}) => {
             targetDom.style.background = "#5EB550";
             targetDom.style.color = "#fff";
         }
-  
     }   
 //--------------시간 선택 및 데이터 스테이트에 값 올리기-----------
 
@@ -159,7 +158,7 @@ const showModalEvent = () => {
         <ModalCon style={{display:activeModal}}>
             <Modalwrap>
                 <Modalinfo>
-                   <Modalinfop>{data == undefined? '준비중' : data.country}<span>이용시간 : {txtStatus} ({timeStatus}시간)</span></Modalinfop> 
+                   <Modalinfop>{data === undefined? '준비중' : data.country}<span>이용시간 : {txtStatus} ({timeStatus}시간)</span></Modalinfop> 
                    <Modalinfobutton onClick={resetTime}>재설정</Modalinfobutton>
                    <Modalinfobutton onClick={showModalEvent}>확인</Modalinfobutton>
                 </Modalinfo>
@@ -170,7 +169,6 @@ const showModalEvent = () => {
                                 <Modalitem className="item" key = {index} data-id = {index} onClick={newSelect}>{c}</Modalitem>
                             )
                         })
-                        
                     }
                 </Modaltime>
             </Modalwrap>
