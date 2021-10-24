@@ -1,0 +1,7 @@
+django
+django-environ
+django-phonenumber-field[phonenumbers]
+psycopg2-binary
+pyotp
+twilio
+black
