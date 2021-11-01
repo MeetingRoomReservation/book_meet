@@ -14,11 +14,11 @@ const Table = ({ data, columns }) => {
         {getKeys(v)?.map((key) =>
           v[key] !== true ? (
             key === 'title' ? (
-              <Td key={uuidv4()}>
-                <Link to={v['url']}>{v[key]}</Link>
+              <Td key={uuidv4()} title>
+                <Link to={{ pathname: `notices/${v.id}` }}>{v[key]}</Link>
               </Td>
             ) : (
-              key !== 'url' && <Td key={uuidv4()}>{v[key]}</Td>
+              <Td key={uuidv4()}>{v[key]}</Td>
             )
           ) : (
             <Td key={uuidv4()}>

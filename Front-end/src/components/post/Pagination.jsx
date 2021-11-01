@@ -1,4 +1,6 @@
 import React from 'react';
+import { PageNav, PageUl, PageLi } from '@components/post/styles';
+import { Link } from 'react-router-dom';
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
@@ -7,18 +9,24 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     pageNumbers.push(i);
   }
 
+  const onClickLink = () => {
+    // paginate(number)
+  };
+
   return (
-    <nav>
-      <ul className="pagination">
-        {/* {pageNumbers.map((number) => (
-          <li key={number} className="page-item">
-            <a onClick={() => paginate(number)} href="!#" className="page-link">
+    <PageNav>
+      <PageUl>
+        <PageLi>Prev</PageLi>
+        {pageNumbers.map((number) => (
+          <PageLi key={number}>
+            <Link to="/" style={{ padding: '10px' }}>
               {number}
-            </a>
-          </li>
-        ))} */}
-      </ul>
-    </nav>
+            </Link>
+          </PageLi>
+        ))}
+        <PageLi>Next</PageLi>
+      </PageUl>
+    </PageNav>
   );
 };
 

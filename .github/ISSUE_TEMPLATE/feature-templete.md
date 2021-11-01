@@ -1,13 +1,16 @@
 ---
-name: Feature templete
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
+name: Feature Template
+about: 구현할 기능을 이슈에 등록한다.
+title: "[feature/{branch_name}] 기능을 구현한다."
+labels: 'feature'
 assignees: ''
 
 ---
 
 ## 🔍 Feature
+
+기능 이름
+
 ## 🗣 설명
 
 설명
@@ -20,8 +23,6 @@ assignees: ''
 
 - [ ] 구현한 내용
 - [ ] 구현하지 못한 내용
-
-
 
 <br/>
 
