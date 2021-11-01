@@ -18,6 +18,7 @@ import {
 const Header = loadable(() => import('@components/Header.js'));
 
 const Main = () => {
+  
   return (
     <>
       <Header />
