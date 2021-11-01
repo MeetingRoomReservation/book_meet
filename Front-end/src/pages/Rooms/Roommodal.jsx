@@ -79,14 +79,17 @@ const Roommodal = ({data,activeModal}) => {
 
     // 이미 예약된 회의실 표시하고 선택 못하게 막아야함
 
-    const {setShowModal} = useContext(ShowBox);
+    const {setShowModal,setShowTime} = useContext(ShowBox);
 //--------------------------------------------------------------
     const [txtStatus,setTxtStatus] = useState([]);
     const [status,setStatus] = useState([]);
     const [timeStatus,timeSetStatus] = useState();
 //--------------------------------------------------------------
+
+
+//------------------------선택시간--------------------------------------
     useEffect(() => {
-        console.log(status)
+
     },[timeStatus,status])
  
     useEffect(() => {
@@ -96,7 +99,7 @@ const Roommodal = ({data,activeModal}) => {
        let result = times.filter((c,index) => {
             return index === status[0] || index === status[1]
         })
-
+        setShowTime(result); //["11:00","12:00"]
         let txt = result[0] === undefined ? '시간을 선택해주세요.' : result[1] === undefined ? `${result[0]}` : `${result[0]} ~ ${result[1]}`;
         setTxtStatus(txt)
         let timer = status[0] === undefined ? '0' :  status.length === 1 ? '1' : status[1] - status[0] + 1;
@@ -112,8 +115,7 @@ const Roommodal = ({data,activeModal}) => {
     const newSelect = (e) => {
         const targetDom = e.currentTarget;
         const target = e.currentTarget.dataset.id;
-        const targetTxt = targetDom.innerText;
-        console.log(targetTxt)
+        
         if(status.length <= 1 ){
             setStatus([...status,Number(target)])
                
@@ -121,9 +123,9 @@ const Roommodal = ({data,activeModal}) => {
             targetDom.style.color = "#fff";
         }
     }   
-//--------------시간 선택 및 데이터 스테이트에 값 올리기-----------
+//----------시간 선택 및 데이터 스테이트에 값 올리기-----------
 
-
+// 전체 관리 하는 state 선택시 true 값을 같이 넘기기 
 
 //--------------------------------------------------------------
 

@@ -144,7 +144,7 @@ const ButtonSt = styled.div`
 const Modal = () => {
     
 
-    const {showModal,setShowModal} = useContext(ShowBox)
+    const {showModal,setShowModal,showTime} = useContext(ShowBox)
 
     const closeModal = () => {
         setShowModal('none')
@@ -179,11 +179,11 @@ const Modal = () => {
                                 <Modallabel>예약시간 :</Modallabel>
                                 <ModalselectCon>
                                     <Modalselect>
-                                        <Modaloption>1</Modaloption>
+                                        <Modaloption>{showTime[0]}</Modaloption>
                                     </Modalselect>
                                     ~
                                     <Modalselect>
-                                        <Modaloption>2</Modaloption>
+                                        <Modaloption>{showTime[1]}</Modaloption>
                                     </Modalselect>
                                 </ModalselectCon>
                             </Inputbox>
