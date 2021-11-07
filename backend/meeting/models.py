@@ -16,18 +16,25 @@ class Room(models.Model):
 
 class Meeting(models.Model):
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/meeting-23
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="host"
     )
     # host = models.CharField(max_length=50)  # null=False, blank=False, 필수 값
+<<<<<<< HEAD
 =======
     host = models.CharField(max_length=50)  # null=False, blank=False, 필수 값
 >>>>>>> 83335ea544bd9616c2c13d2d178e659abd532b87
+=======
+>>>>>>> feature/meeting-23
     # token 값 활용해서-> 변환해서 저장 ## 창성님이 알려주신 방법대로
     # 1) https://han-py.tistory.com/353 , #2) request.user # 요지는 forntend, 자동적으로 값 가져오도록
     title = models.CharField(max_length=100)
     meeting_date = models.DateField()
     room_set = models.ManyToManyField(Room)  # 선택한 회의실
+<<<<<<< HEAD
 <<<<<<< HEAD
     user_set = models.ManyToManyField(
         settings.AUTH_USER_MODEL, related_name="guest"
@@ -35,6 +42,11 @@ class Meeting(models.Model):
 =======
     user_set = models.ManyToManyField(settings.AUTH_USER_MODEL)  # 회의 참석자들 [1, 2, 3]
 >>>>>>> 83335ea544bd9616c2c13d2d178e659abd532b87
+=======
+    user_set = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, related_name="guest"
+    )  # 회의 참석자들 [1, 2, 3]
+>>>>>>> feature/meeting-23
     meeting_starttime = models.DateTimeField()  # 14:00
     meeting_end_time = models.DateTimeField()  # 10:00
 
