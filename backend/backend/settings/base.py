@@ -99,6 +99,7 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASE_URL=postgres://rgqwrweu:DJp5q_BFrYP0KmyQx15jxEbMlzuCfFEA@arjuna.db.elephantsql.com/rgqwrweu
 # DATABASES = {"default": env.db()}
 
 DATABASES = {

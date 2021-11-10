@@ -31,7 +31,7 @@ from rest_framework.serializers import ValidationError
 
 # option#2
 class MeetingCreateSerializer(serializers.ModelSerializer):
-    tracks = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    # tracks = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     def create(self, validated_data):
         """1. Override ``create`` to provide a user via request.user by default.
