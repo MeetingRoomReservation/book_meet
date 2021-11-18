@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
     "babel-eslint": "^10.1.0",
     "craco-alias": "^3.0.1",
     "react": "^17.0.2",
@@ -20,6 +21,7 @@
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.1",
     "styled-reset": "^4.3.4",
+    "use-reducer-with-side-effects": "^2.2.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
