@@ -10,36 +10,60 @@ export const ContainerWrap = styled.div`
 export const Container = styled.div`
   display: flex;
   border-radius: 20px;
-  width: 1120px;
-  height: 630px;
+  width: 80%;
+  height: auto;
   background-color: #162936;
-  margin-top: 110px;
-  margin-bottom: 40px;
+  padding: 30px 0 10px;
   justify-content: center;
   align-items: center;
+  max-width: 800px;
 `;
 
 export const Span = styled.span`
   color: white;
-  margin-right: 30px;
-  font-size: 20px;
+  font-size: 18px;
+  width: 20%;
+  margin:0 0 0 5%;
+  display: inline-block;
+  text-align: left;
 `;
 
-export const InputText = styled.input`
-  line-height: 240px;
-  width: 980px;
+export const InputText = styled.textarea`
+  width: 90%;
   border-radius: 20px;
+  height: 50vh;
+  max-height: 180px;
+    ::-webkit-scrollbar {
+        width:6px;
+        margin-right: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+      background: #000;
+      width: 10px;
+      height: 5px;
+      border-radius: 20px;
+    }
+    ::-webkit-scrollbar-track{
+      background: #fff;
+      
+    }
 `;
 
 export const InputLeft = styled.input`
-  width: 700px;
-  height: 50px;
+  width: 70%;
   border-radius: 20px;
+  font-size: 16px;
+  padding: 5px 0;
+  text-indent: 20px;
+ 
 `;
 
 export const ContentDiv = styled.div`
   color: white;
-  margin-bottom: 20px;
+  width: 20%;
+  margin: 0 0 20px 5%;
+  font-size: 18px;
+ 
 `;
 
 // const ButtonContainer = styled.div`
@@ -67,15 +91,17 @@ export const ButtonConfirm = styled.button`
   border: none;
   border-radius: 50px;
   color: white;
-  padding: 15px 150px;
+  /* padding: 15px 150px; */
+  width: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  padding: 5px 0;
   :hover {
-    background-color: blue;
+    background-color: #162936;
   }
-  font-size: 16px;
-  margin-right: 30px;
+  font-size: 20px;
+  cursor: pointer;
 `;
 
 export const ButtonCancel = styled.button`
@@ -83,29 +109,33 @@ export const ButtonCancel = styled.button`
   border: none;
   border-radius: 50px;
   color: white;
-  padding: 15px 150px;
+  width: 100%;
+  /* padding: 15px 150px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   :hover {
-    background-color: red;
+    background-color: #162936;
   }
-  font-size: 16px;
-  margin-right: 30px;
+  font-size: 20px;
+  padding: 5px 0;
+  cursor: pointer;
 `;
 
 export const Label = styled.label`
   color: white;
-  margin-right: 50px;
+  margin-right: 15px;
+  font-size: 16px;
 `;
 
 export const Select = styled.select`
   border-radius: 20px;
-  width: 100px;
+  width: 20%;
   height: 30px;
   text-align: center;
+  max-width: 100px;
 `;
 
 export const InputCheck = styled.input`
-  margin-right: 15px;
+  margin-right: 10px;
 `;
