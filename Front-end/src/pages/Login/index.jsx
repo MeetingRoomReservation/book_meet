@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-import { LoginWrap,LoginBox,FormTitle,FormSpan,FormSt,InputId,FormBtn,LinkCon } from "./styles";
-
+import { Link } from 'react-router-dom';
+import { LoginWrap, LoginBox, FormTitle, FormSpan, FormSt, InputId, FormBtn, LinkCon } from './styles';
 
 const Login = () => {
-  
   return (
     <LoginWrap>
       <LoginBox>
