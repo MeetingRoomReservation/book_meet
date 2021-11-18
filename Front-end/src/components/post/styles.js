@@ -50,10 +50,9 @@ export const TitleLabel = styled.label`
   text-align: center;
   font-weight: bold;
   width: 15%;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   border-bottom: 2px solid silver;
   height: 100%;
-  }
 `;
 
 export const Input = styled.input`
@@ -65,7 +64,6 @@ export const Input = styled.input`
   color: #999;
   padding: 10px 0;
   font-family: 'NanumSquare', sans-serif;
-  }
 `;
 
 export const ContentContainer = styled.div`
@@ -82,7 +80,6 @@ export const Textarea = styled.textarea`
   font-size: 1.2rem;
   font-family: 'NanumSquare', sans-serif;
   color: #888;
-  }
 `;
 
 export const LinkBtn = styled(Link)`
