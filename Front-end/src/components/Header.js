@@ -12,6 +12,8 @@ const MainContainer = styled.div`
   color: white;
   background-color: #344551;
   align-items: center;
+  position: relative;
+  z-index:999;
 `;
 
 const Title = styled.div`
@@ -30,7 +32,6 @@ const BtnList = styled.span`
 `;
 
 const Header = () => {
-  
   return (
     <MainContainer>
       <Title>
@@ -47,7 +48,9 @@ const Header = () => {
           <Link to="/minutes">회의록작성</Link>
         </BtnList>
         <BtnList>
-          <Link to="/users">마이페이지</Link>
+          <Link exact to="/users">
+            마이페이지
+          </Link>
         </BtnList>
       </BtnContainer>
     </MainContainer>

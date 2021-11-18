@@ -46,19 +46,19 @@ const Index = () => {
       "personnel" : "4명"
     },
     {
-      "id" : 5,
+      "id" : 7,
       "country" :"korea",
       "location" : "본관 1 층",
       "personnel" : "4명"
     },
     {
-      "id" : 5,
+      "id" : 8,
       "country" :"korea",
       "location" : "본관 1 층",
       "personnel" : "4명"
     },
     {
-      "id" : 5,
+      "id" : 9,
       "country" :"korea",
       "location" : "본관 1 층",
       "personnel" : "4명"
@@ -86,6 +86,9 @@ const Index = () => {
 
 // modal 확인 버튼을 누르면 새로운 모달 열림
 const [showModal,setShowModal] = useState();
+
+//시간 값 전달 
+const [showTime,setShowTime] = useState();
   return (
     <>
       <Header/>
@@ -127,7 +130,7 @@ const [showModal,setShowModal] = useState();
              
             </Roomwrap>
         </Roomcon>
-        <ShowBox.Provider value={{showModal,setShowModal}}>
+        <ShowBox.Provider value={{showModal,setShowModal,showTime,setShowTime}}>
           <Roommodal data = {data} activeModal = {activeModal}/>
           <Modal/>
         </ShowBox.Provider>
