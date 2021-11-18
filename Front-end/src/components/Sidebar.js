@@ -22,10 +22,14 @@ const SideBar = () => {
   return (
     <SideContainer>
       <SideDiv>
-        <Link to="/users/info">회의 예약 현황</Link>
+        <Link to="/users">회의 예약 현황</Link>
       </SideDiv>
-      <SideDiv>회의록 현황</SideDiv>
-      <SideDiv>개인정보 수정</SideDiv>
+      <SideDiv>
+        <Link to="/users/minutes">회의록 현황</Link>
+      </SideDiv>
+      <SideDiv>
+        <Link to="/users/modify">개인정보 수정</Link>
+      </SideDiv>
     </SideContainer>
   );
 };
