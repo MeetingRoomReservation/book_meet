@@ -28,8 +28,9 @@ const Minutes = () => {
     <>
       <Header />
       <ContainerWrap>
+        <h2 style={{fontSize:'25px',fontWeight:'bold',padding:'20px 0'}}>회의록 작성</h2>
         <Container>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} style={{width:'100%'}}>
             <SpanDiv>
               <Span>회의 일자</Span>
               <InputLeft type="date" className="date"></InputLeft>
@@ -44,7 +45,9 @@ const Minutes = () => {
             </SpanDiv>
             <SpanDiv>
               <ContentDiv>내용</ContentDiv>
-              <InputText type="text" className="content"></InputText>
+              <div style={{width:'100%',textAlign:'center'}}>
+                <InputText type="text" className="content"></InputText>
+              </div>
             </SpanDiv>
             <SpanDiv>
               <Span>읽기 권한</Span>
@@ -64,11 +67,11 @@ const Minutes = () => {
             </SpanDiv>
           </form>
         </Container>
-        <div>
-          <Link to="/minutes">
+        <div style={{width:'80%',display:'flex',justifyContent:'space-between',marginTop:'20px',maxWidth:'800px'}}>
+          <Link to="/minutes" style={{width:'45%'}}>
             <ButtonConfirm type="submit">작성하기</ButtonConfirm>
           </Link>
-          <Link to="/minutes">
+          <Link to="/minutes"  style={{width:'45%'}}>
             <ButtonCancel type="submit">취소</ButtonCancel>
           </Link>
         </div>

@@ -14,6 +14,7 @@ export const MainLeft = styled.div`
   width: 60%;
   height: 100%;
   position: relative;
+  overflow: hidden;
 `;
 
 export const MainBox = styled.div`
@@ -57,17 +58,19 @@ export const SideCard = styled.div`
 
 export const SideBox = styled.div`
   box-sizing: border-box;
-  padding: 5px 10px;
   width: 100%;
   height: 110px;
   background-color: #ccc;
   border-radius: 20px;
   margin-top: 10px;
   margin-bottom: 30px;
+  text-align: left;
+  font-size: 1.2vw;
+  padding: 5px 10px;
 `;
 
 export const SideText = styled.p`
-  margin-top: 15px;
+  margin-top: 10px;
 `;
 
 export const SideTitle = styled.p`
@@ -81,7 +84,7 @@ export const SideTitle = styled.p`
 `;
 
 export const SideNoP = styled.p`
-  font-size: 30px;
-  margin-top: 35px;
-  margin-left: 150px;
+  font-size: 1em;
+  text-align:center !important;
+  margin-top: 40px;
 `;
