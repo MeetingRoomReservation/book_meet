@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+from datetime import timedelta
 
 
 env = environ.Env(
@@ -52,7 +53,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # third-party
+    # third-party",
+    "rest_framework",
+    "django_filters",
+    "corsheaders",
     "phonenumber_field",
     # local apps
     "accounts",
@@ -95,8 +99,15 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {"default": env.db()}
+# DATABASE_URL=postgres://rgqwrweu:DJp5q_BFrYP0KmyQx15jxEbMlzuCfFEA@arjuna.db.elephantsql.com/rgqwrweu
+# DATABASES = {"default": env.db()}
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
 
 AUTH_USER_MODEL = "accounts.User"
 
@@ -123,15 +134,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ko-kr"  # 국가 설정
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul"  # 시간대 설정
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -143,3 +154,23 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 30,
+    # "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    # "EXCEPTION_HANDLER": "transactions.utils.custom_exception_handler",
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ROTATE_REFRESH_TOKENS": False,
+    "ALGORITHM": "HS256",
+    "SIGNING_KEY": SECRET_KEY,
+}

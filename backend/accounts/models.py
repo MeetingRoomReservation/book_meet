@@ -88,6 +88,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     notice_permission = models.BooleanField(default=False)  # 공지사항 작성권한여부
     is_staff = models.BooleanField(default=False)  # 로그인만 할수 있는 권한
     is_active = models.BooleanField(default=True)  # 활성화 여부
+    meeting = models.ManyToManyField(
+        "meeting.Meeting", through="meeting.Reservation", related_name="meetings"
+    )
 
     objects = CustomAccountManager()
 
