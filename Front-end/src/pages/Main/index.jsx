@@ -15,13 +15,9 @@ import {
   SideTitle,
 } from './styles';
 
-const Header = loadable(() => import('@components/Header.js'));
-
 const Main = () => {
-  
   return (
     <>
-      <Header />
       <Container>
         <MainLeft>
           <MainBox>
