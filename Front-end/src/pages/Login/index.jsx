@@ -45,7 +45,7 @@ const Login = () => {
           <InputId type="password" placeholder="Password" value={password} onChange={onChangePassword}></InputId>
           <FormBtn>로그인</FormBtn>
           <LinkCon>
-            <Link to="/register">회원가입</Link>
+            <Link to="/accounts/register">회원가입</Link>
             <Link to="/">비밀번호 찾기</Link>
           </LinkCon>
         </FormSt>

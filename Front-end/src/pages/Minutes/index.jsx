@@ -17,7 +17,6 @@ import {
   SpanP,
   InputLeftP,
 } from './styles';
-const Header = loadable(() => import('@components/Header.js'));
 
 const onSubmit = (event) => {
   event.preventDefault();
@@ -26,7 +25,6 @@ const onSubmit = (event) => {
 const Minutes = () => {
   return (
     <>
-      <Header />
       <ContainerWrap>
         <h2 style={{ fontSize: '25px', fontWeight: 'bold', padding: '20px 0' }}>회의록 작성</h2>
         <Container>

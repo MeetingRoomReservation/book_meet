@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '@components/Header';
 import NoticeList from '@components/post/NoticeList';
 import PostWriting from '@components/post/PostWriting';
 import PostView from '@components/post/PostView';
@@ -9,7 +8,6 @@ import NoticeNewForm from 'components/post/NoticeNewForm';
 const Index = () => {
   return (
     <>
-      <Header />
       <Switch>
         <Route path="/notices/writing" component={NoticeNewForm} />
         {/* <Route exact path="/notices/writing" component={NoticeNewForm} /> */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
@@ -13,7 +13,7 @@ const MainContainer = styled.div`
   background-color: #344551;
   align-items: center;
   position: relative;
-  z-index:999;
+  z-index: 999;
 `;
 
 const Title = styled.div`
@@ -30,34 +30,40 @@ const BtnList = styled.span`
     color: #ff9e0d;
   }
 `;
+const activeStyle = {
+  color: '#ff9e0d',
+};
 
 const Header = () => {
   return (
     <MainContainer>
       <Title>
-        <Link to="/main">회의 관리 시스템</Link>
+        <NavLink to="/">회의 관리 시스템</NavLink>
       </Title>
       <BtnContainer>
         <BtnList>
-          <Link to="/notices">공지사항</Link>
+          <NavLink to="/notices" activeStyle={activeStyle}>
+            공지사항
+          </NavLink>
         </BtnList>
         <BtnList>
-          <Link to="/rooms">회의실 예약</Link>
+          <NavLink to="/rooms" activeStyle={activeStyle}>
+            회의실 예약
+          </NavLink>
         </BtnList>
         <BtnList>
-          <Link to="/minutes">회의록작성</Link>
+          <NavLink to="/minutes" activeStyle={activeStyle}>
+            회의록작성
+          </NavLink>
         </BtnList>
         <BtnList>
-          <Link exact to="/users">
+          <NavLink exact to="/users" activeStyle={activeStyle}>
             마이페이지
-          </Link>
+          </NavLink>
         </BtnList>
       </BtnContainer>
     </MainContainer>
   );
 };
-
-// commit test 입니다.
-// 2021-10-20 3:55
 
 export default Header;
