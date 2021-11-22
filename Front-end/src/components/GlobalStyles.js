@@ -36,8 +36,9 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
+  }
+  strong { font-weight: bold !important; }
+  em { font-style: italic !important; }
 `;
 
 export default GlobalStyle;

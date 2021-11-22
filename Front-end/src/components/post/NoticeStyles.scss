@@ -1,0 +1,47 @@
+.ant-form {
+  border-top: 1px solid #eee;
+}
+
+.ant-form-item {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+  margin: 0;
+}
+
+.ant-form-item-label {
+  display: flex;
+  justify-content: center;
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1em;
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.ant-form-vertical .ant-form-item-label > label,
+.ant-form-horizontal .ant-form-item-label > label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.ant-btn {
+  &:hover {
+    color: #999;
+    border-color: #999;
+  }
+}
+
+.ant-btn-primary {
+  border-color: #344551;
+  background: #344551;
+  margin-right: 0.1em;
+  &:hover {
+    color: #fff;
+
+    border-color: #506a7c;
+    background: #506a7c;
+  }
+}

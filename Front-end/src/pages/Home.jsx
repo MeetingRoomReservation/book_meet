@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from 'components/Header';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import loadable from '@loadable/component';
-import AppLayout from 'components/AppLayout';
 
 const Main = loadable(() => import('@pages/Main'));
 const Minutes = loadable(() => import('@pages/Minutes'));

@@ -1,0 +1,32 @@
+.ant-table-wrapper {
+  width: 100%;
+}
+
+.ant-table table {
+  border-collapse: collapse;
+}
+
+.ant-table-small .ant-table-thead > tr > th {
+  font-weight: bold;
+  background-color: inherit;
+  border-bottom: 2px solid #999;
+}
+
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  display: none;
+}
+
+.ant-pagination-item a,
+.ant-pagination-item-active {
+  margin: 0 10px;
+}
+.ant-pagination-item-active {
+  border: none;
+
+  a {
+    color: #294050;
+    border-bottom: 2px solid #294050;
+  }
+}
