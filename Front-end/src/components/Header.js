@@ -7,7 +7,7 @@ const MainContainer = styled.div`
   justify-content: space-between;
   height: 100%;
   max-width: 100%;
-  min-width: 1000px;
+  min-width: 650px;
   padding: 25px;
   color: white;
   background-color: #344551;

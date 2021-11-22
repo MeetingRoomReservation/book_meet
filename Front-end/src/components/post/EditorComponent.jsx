@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import 'components/post/EditorStyles.scss';
 
 const formats = [
   'header',
@@ -21,25 +22,20 @@ const formats = [
 
 const modules = {
   toolbar: [
-    //[{ 'font': [] }],
-    [{ header: [1, 2, false] }],
+    [{ header: [1, 2, 3, false] }],
     ['bold', 'italic', 'underline', 'strike', 'blockquote'],
     [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
-    [{ align: [] }, { color: [] }, { background: [] }], // dropdown with defaults from theme
+    [{ align: [] }, { color: [] }, { background: [] }],
     ['clean'],
   ],
 };
 const EditorComponent = ({ content, handler }) => {
-  //   const [value, setValue] = useState('');
-  console.log(content);
-
   return (
     <ReactQuill
       modules={modules}
       formats={formats}
       value={content || ''}
       onChange={(content, delta, source, editor) => handler(editor.getHTML())}
-      style={{ height: '300px' }}
     />
   );
 };
